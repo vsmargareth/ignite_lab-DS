@@ -1,12 +1,12 @@
 import { Meta, StoryObj } from '@storybook/react'
 import { Children } from 'react'
-import { Text, TextProps } from './Text'
+import { Heading, HeadingProps } from './Heading'
 
 export default {
-  title: 'Components/Text',
-  component: Text,
+  title: 'Components/Heading',
+  component: Heading,
   args: {
-    children: 'meu primeiro componente',
+    children: 'meu Segundo componente',
     size: 'md',
   },
   argTypes: {
@@ -17,26 +17,26 @@ export default {
       }
     }
   }
-} as Meta<TextProps>
+} as Meta<HeadingProps>
 
 // para o storybook precisamos exportar uma variante que não seja a padrão 
-export const Primary: StoryObj<TextProps> = {}
-export const Small: StoryObj<TextProps> = {
+export const Primary: StoryObj<HeadingProps> = {}
+export const Small: StoryObj<HeadingProps> = {
   args: {
     size: 'sm',
 
   }
 }
-export const Large: StoryObj<TextProps> = {
+export const Large: StoryObj<HeadingProps> = {
   args: {
     size: 'lg'
   }
 }
-export const CustomComponents: StoryObj<TextProps> = {
+export const CustomComponents: StoryObj<HeadingProps> = {
   args: {
     asChild: true,
     children: (
-      <p>mudando a tag para P</p>
+      <h1>Heading H1</h1>
     )
   },
   argTypes: {
@@ -47,7 +47,7 @@ export const CustomComponents: StoryObj<TextProps> = {
     },
     asChild: {
       table: {
-        disable: true
+        disable: true,
       }
     }
   }
